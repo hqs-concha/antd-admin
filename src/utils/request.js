@@ -23,7 +23,7 @@ const err = (error) => {
         description: data.message,
       })
     }
-    if (error.response.status === 401 && !(data.result && data.result.isLoginRequest)) {
+    if (error.response.status === 401 && !(data.data && data.data.isLoginRequest)) {
       notification.error({
         message: '非法访问',
         description: '授权验证失败',
